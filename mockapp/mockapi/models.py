@@ -21,6 +21,7 @@ class Pool(models.Model):
     token_price = models.DecimalField(max_digits=25, decimal_places=4, default=0.00, null=True, blank=True)
     senior_tranche = models.DecimalField(max_digits=25, decimal_places=4, default=0.00, null=True, blank=True)
     junior_tranche =  models.DecimalField(max_digits=25, decimal_places=4, default=0.00, null=True, blank=True)
+    is_active = models.BooleanField(null= True , default= True)
     last_updated = models.DateTimeField(auto_now_add =True)
     def __str__(self):
         return f"{self.name}"

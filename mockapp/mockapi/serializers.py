@@ -4,7 +4,7 @@ from .models import Pool, Asset
 class PoolSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pool
-        fields =  ["current_supply","nav","tenure","issue_size","senior_apy","junior_apy","token_price","senior_tranche","junior_tranche"]     
+        fields =  ["current_supply","nav","tenure","issue_size","senior_apy","junior_apy","token_price","senior_tranche","junior_tranche","is_active"]     
         # fields = "__all__"
 
 class ListPoolAssetSerializer(serializers.ModelSerializer):
