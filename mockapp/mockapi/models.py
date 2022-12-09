@@ -22,6 +22,7 @@ class Pool(models.Model):
     senior_tranche = models.DecimalField(max_digits=25, decimal_places=4, default=0.00, null=True, blank=True)
     junior_tranche =  models.DecimalField(max_digits=25, decimal_places=4, default=0.00, null=True, blank=True)
     is_active = models.BooleanField(null= True , default= True)
+    reward_rate = models.DecimalField(max_digits=25, decimal_places=4, default=0.00, null=True, blank=True)
     last_updated = models.DateTimeField(auto_now_add =True)
     def __str__(self):
         return f"{self.name}"
